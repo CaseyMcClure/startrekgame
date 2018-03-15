@@ -8,15 +8,30 @@ namespace StarTrekGame
 {
     public class Ship
     {
-        private Engine engine;
-        private Shield shield;
-        public const int DEFAULT_ENERGY = 80000;
-        private int energy = DEFAULT_ENERGY;
+        public Engine engine;
+        public Phaser phaser;
+        public Torpedo torpedo;
+        public Shield shield;
+        public int energy;
+        public List<Subsystem> subsystems;
         
         public Ship()
         {
+            subsystems = new List<Subsystem>();
+
             engine = new Engine();
+            subsystems.Add(engine);
+
+            phaser = new Phaser();
+            subsystems.Add(phaser);
+
+            torpedo = new Torpedo();
+            subsystems.Add(torpedo);
+
             shield = new Shield();
+            subsystems.Add(shield);
+
+            energy = 80000;
         }
 
         public Engine GetEngine()
@@ -31,7 +46,16 @@ namespace StarTrekGame
 
         public Shield GetShield()
         {
-            return shield;
+            return shield
+        }
+
+        public void DamageShields(int amount)
+        {
+        }
+
+        public void DamageSubsystem(int index, int amount)
+        {
+            subsystems[index].Damage(amount);
         }
     }
 }

@@ -26,5 +26,9 @@ namespace StarTrekGame
         {
             energy += energyToAdd;
         }
+        public void Damage(int amount)
+        {
+            integrity -= amount;
+        }
     }
 }

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace StarTrekGame
 {
-    public class Engine
+    public class Engine:Subsystem
     {
- 
+        
     }
 }

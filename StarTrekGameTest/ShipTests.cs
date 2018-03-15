@@ -40,6 +40,13 @@ namespace StarTrekGameTest
         {
             Assert.IsNotNull(ship.GetShield());
         }
+        
+        [TestMethod]
+        public void transferEnergyToSubsystem()
+        {
+            int currentEnergy = ship.GetEnergy();
+            int energyTransfer;
+        }
 
     }
 }

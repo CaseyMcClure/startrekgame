@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StarTrekGame
 {
-    class Phaser:Weapon
+    public class Phaser:Weapon
     {
     }
 }
