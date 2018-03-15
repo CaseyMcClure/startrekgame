@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SuperStarTrek;
+using StarTrekGame;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace SuperStarTrekTest
+namespace StarTrekGameTest
 {
     [TestClass]
     public class ShieldTests
@@ -36,41 +36,41 @@ namespace SuperStarTrekTest
         [TestMethod]
         public void ShieldDefaultEnergy()
         {
-            Assert.AreEqual(8000, shield.GetCurrrentEnergy());
+            Assert.AreEqual(8000, shield.GetCurrentEnergy());
         }
 
         [TestMethod]
         public void TransferShieldEnergy()
         {
             shield.TransferEnergy(2000);
-            Assert.AreEqual(10000, shield.GetCurrrentEnergy());
+            Assert.AreEqual(10000, shield.GetCurrentEnergy());
         }
 
         [TestMethod]
         public void TestMaximumShieldPower()
         {
             shield.TransferEnergy(2001);
-            Assert.AreEqual(shield.maxPower, shield.GetCurrrentEnergy());
+            Assert.AreEqual(shield.maxPower, shield.GetCurrentEnergy());
         }
 
         [TestMethod]
         public void TestMinimumShieldPower()
         {
             shield.TransferEnergy(-8001);
-            Assert.AreEqual(0, shield.GetCurrrentEnergy());
+            Assert.AreEqual(0, shield.GetCurrentEnergy());
         }
 
         [TestMethod]
         public void TestShieldDamage()
         {
             shield.DamageShields(2000);
-            Assert.AreEqual(6000, shield.GetCurrrentEnergy());
+            Assert.AreEqual(6000, shield.GetCurrentEnergy());
         }
 
         [TestMethod]
-        public void TestIntegrity()
+        public void TestDefaultIntegrity()
         {
-            Assert.AreNotEqual(shield.maxIntegrity, shield.GetIntegrity());
+            Assert.AreEqual(shield.maxIntegrity, shield.GetIntegrity());
         }
     }
 }

@@ -23,7 +23,7 @@ namespace StarTrekGame
             isUp = true;
         }
 
-        public int GetCurrrentEnergy()
+        public int GetCurrentEnergy()
         {
             return power;
         }

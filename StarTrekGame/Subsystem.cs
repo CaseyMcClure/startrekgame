@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SuperStarTrek
+namespace StarTrekGame
 {
     public class Subsystem
     {
-        int integrity = 10;
-        public int maxIntegrity = 10;
+        int integrity = 10000;
+        public int maxIntegrity = 10000;
 
         public int GetIntegrity()
         {
-            return maxIntegrity;
+            return integrity;
         }
     }
 }

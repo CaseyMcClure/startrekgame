@@ -6,14 +6,7 @@ using System.Threading.Tasks;
 
 namespace StarTrekGame
 {
-    public class Ship:Subsystem
+    class Phaser:Weapon
     {
-        Engine engine;
-        
-        public Ship()
-        {
-            engine = new Engine();
-
-        }
     }
 }
