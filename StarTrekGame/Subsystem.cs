@@ -14,7 +14,7 @@ namespace StarTrekGame
 
         public int GetIntegrity()
         {
-            return integrity;
+            return maxIntegrity;
         }
 
         public int GetEnergy()
@@ -26,7 +26,8 @@ namespace StarTrekGame
         {
             energy += energyToAdd;
         }
-        public void Damage(int amount)
+
+        public void DamageIntegrity(int amount)
         {
             integrity -= amount;
         }

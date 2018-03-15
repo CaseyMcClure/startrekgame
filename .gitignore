@@ -1,0 +1,7 @@
+
+*.sqlite
+.vs/StarTrekGame/v15/.suo
+*.ide-wal
+*.ide-shm
+*.ide
+*.json
