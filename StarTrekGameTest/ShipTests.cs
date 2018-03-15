@@ -20,7 +20,7 @@ namespace StarTrekGameTest
         [TestMethod]
         public void CheckForEngine()
         {
-            Assert.IsNotNull(ship.Engine);
+            Assert.IsNotNull(ship.GetEngine());
         }
     }
 }

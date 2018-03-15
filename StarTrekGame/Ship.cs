@@ -15,5 +15,10 @@ namespace StarTrekGame
             engine = new Engine();
 
         }
+
+        public Engine GetEngine()
+        {
+            return engine;
+        }
     }
 }
