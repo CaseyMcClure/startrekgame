@@ -15,5 +15,11 @@ namespace StarTrekGame
         {
             return integrity;
         }
+
+        public void Damage(int amount)
+        {
+            integrity -= amount;
+        }
+
     }
 }

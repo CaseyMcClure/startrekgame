@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StarTrekGame
 {
-    class Torpedo:Weapon
+    public class Torpedo:Weapon
     {
 
     }
