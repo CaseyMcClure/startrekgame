@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StarTrekGame
 {
-    public class Ship
+    class Ship
     {
         public Engine engine;
         public Phaser phaser;
@@ -14,13 +14,10 @@ namespace StarTrekGame
         public Shield shield;
         public int energy;
         public List<Subsystem> subsystems;
-        
+        public Random r;
+
         public Ship()
         {
-            subsystems = new List<Subsystem>();
-
-            engine = new Engine();
-            subsystems.Add(engine);
 
             phaser = new Phaser();
             subsystems.Add(phaser);
@@ -30,8 +27,22 @@ namespace StarTrekGame
 
             shield = new Shield();
             subsystems.Add(shield);
-
             energy = 80000;
+        }
+
+        public Ship(Random r)
+        {
+            PopulateShip();
+
+            this.r = r;
+        }
+
+        private void PopulateShip()
+        {
+            subsystems = new List<Subsystem>();
+
+            engine = new Engine();
+            subsystems.Add(engine);
         }
 
         public Engine GetEngine()
@@ -46,16 +57,34 @@ namespace StarTrekGame
 
         public Shield GetShield()
         {
-            return shield
+            return shield;
+
         }
 
-        public void DamageShields(int amount)
+        public void ProcessAttack(int amount)
         {
+            if (shield.GetCurrentEnergy() - amount > 0)
+            {
+                shield.DamageShields(amount);
+            }
+            else
+            {
+                int excessDamage = amount - shield.GetCurrentEnergy();
+                shield.DamageShields(shield.GetCurrentEnergy());
+                int subsystemIndex = SubsystemToDamage();
+                DamageSubsystem(subsystemIndex, excessDamage);
+            }
+        }
+
+        private int SubsystemToDamage()
+        {
+            int subsystemIndex = r.Next(subsystems.Count - 1);
+            return subsystemIndex;
         }
 
         public void DamageSubsystem(int index, int amount)
         {
-            subsystems[index].Damage(amount);
+            subsystems[index].DamageIntegrity(amount);
         }
     }
 }

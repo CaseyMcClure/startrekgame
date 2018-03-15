@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
+    "",
+    "\\StarTrekGame"
+  ],
+  "SelectedNode": "\\StarTrekGame\\Engine.cs",
+=======
     ""
   ],
+>>>>>>> 5315d1d59c2186767334a8fbb4e68bdca5bf7f82
   "PreviewInSolutionExplorer": false
 }
