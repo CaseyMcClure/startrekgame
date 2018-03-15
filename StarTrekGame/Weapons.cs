@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace SuperStarTrek
 {
-    class Ship:Subsystem
+    class Weapons:Subsystem
     {
-       
-        public Ship()
-        {
-
-        }
     }
 }
