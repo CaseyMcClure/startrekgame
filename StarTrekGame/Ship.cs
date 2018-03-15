@@ -46,7 +46,7 @@ namespace StarTrekGame
 
         public Shield GetShield()
         {
-            return shield
+            return shield;
         }
 
         public void DamageShields(int amount)

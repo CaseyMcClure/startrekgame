@@ -26,13 +26,13 @@ namespace StarTrekGameTest
         [TestMethod]
         public void EnergyReserveDefault()
         {
-            Assert.AreEqual(80000, Ship.DEFAULT_ENERGY);
+            Assert.AreEqual(80000, ship.energy);
         }
 
         [TestMethod]
         public void EnergyEqualToDefault()
         {
-            Assert.AreEqual(ship.GetEnergy(), Ship.DEFAULT_ENERGY);
+            Assert.AreEqual(ship.GetEnergy(), ship.energy);
         }
 
         [TestMethod]
