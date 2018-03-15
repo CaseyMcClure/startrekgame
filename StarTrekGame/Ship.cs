@@ -8,6 +8,7 @@ namespace SuperStarTrek
 {
     class Ship:Subsystem
     {
+       
         public Ship()
         {
 

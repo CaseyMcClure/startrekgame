@@ -65,5 +65,11 @@ namespace SuperStarTrekTest
             shield.DamageShields(2000);
             Assert.AreEqual(6000, shield.GetCurrrentEnergy());
         }
+
+        [TestMethod]
+        public void TestIntegrity()
+        {
+            Assert.AreNotEqual(shield.maxIntegrity, shield.GetIntegrity());
+        }
     }
 }

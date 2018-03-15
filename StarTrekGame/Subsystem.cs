@@ -8,6 +8,12 @@ namespace SuperStarTrek
 {
     public class Subsystem
     {
-        int integrity;
+        int integrity = 10;
+        public int maxIntegrity = 10;
+
+        public int GetIntegrity()
+        {
+            return maxIntegrity;
+        }
     }
 }
