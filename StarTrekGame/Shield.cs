@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SuperStarTrek;
 
-namespace SuperStarTrek
+namespace StarTrekGame
 {
     public class Shield:Subsystem
     {

@@ -14,7 +14,8 @@ namespace SuperStarTrekTest
     {
        Shield shield;
 
-       public ShieldTests()
+        [TestInitialize()]
+       public void Startup()
         {
             shield = new Shield();
         }

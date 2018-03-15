@@ -1,13 +1,22 @@
 ﻿using System;
+using System.Text;
+using System.Collections.Generic;
+using StarTrekGame;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace UnitTestProject1
+
+namespace StarTrekGameTest
 {
+    /// <summary>
+    /// Summary description for ShipTests
+    /// </summary>
     [TestClass]
-    public class UnitTest1
+    public class ShipTests
     {
-        [TestMethod]
-        public void CheckForEngine()
+        Ship ship;
+
+       [TestInitialize()]
+       public void Startup()
         {
 
         }

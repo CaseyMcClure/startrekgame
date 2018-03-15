@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SuperStarTrek
+namespace StarTrekGame
 {
-    class Ship:Subsystem
+    public class Ship:Subsystem
     {
        
         public Ship()
