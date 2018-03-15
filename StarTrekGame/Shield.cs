@@ -1,42 +1,55 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace StarTrekGame
+namespace SuperStarTrek
 {
-    public class Shield
+    public class Shield:Subsystem
     {
-
-        public const int SHIELD_MAX = 10000;
-        public const int SHIELD_DEFAULT = 8000;
-
-        private int power = SHIELD_DEFAULT;
-        private bool isUp = false;
+        bool isUp = false;
+        int power = 8000;
+        public int maxPower = 10000;
 
         public bool IsUp()
-        {
-            return false;
-        }
-
-        public void Raise()
-        {
-            isUp = true;
-        }
-
-        public int GetCurrentEnergyLevel()
-        {
-            return power;
-        }
-
-        public bool GetIsUp()
         {
             return isUp;
         }
 
-        public void AddEnergy(int amountOfPowerToAdd)
+        public void RaiseShield()
         {
-            power += amountOfPowerToAdd;
-            if(power > SHIELD_MAX)
+            isUp = true;
+        }
+
+        public int GetCurrrentEnergy()
+        {
+            return power;
+        }
+
+        public void TransferEnergy(int amountToTransfer)
+        {
+            power += amountToTransfer;
+            if (power > maxPower)
             {
-                power = SHIELD_MAX;
+                power = maxPower;
+            }
+            if (power < 0)
+            {
+                power = 0;
+            }
+        }
+
+        public void DamageShields(int amountToDamage)
+        {
+            power -= amountToDamage;
+            if (power > maxPower)
+            {
+                power = maxPower;
+            }
+            if (power < 0)
+            {
+                power = 0;
             }
         }
     }

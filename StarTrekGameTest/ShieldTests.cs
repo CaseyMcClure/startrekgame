@@ -1,74 +1,69 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SuperStarTrek;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using StarTrekGame;
 
-namespace StarTrekGameTest
+
+namespace SuperStarTrekTest
 {
     [TestClass]
     public class ShieldTests
     {
+       Shield shield;
 
-        private Shield shield;
-
-        [TestInitialize()]
-        public void Startup()
+       public ShieldTests()
         {
             shield = new Shield();
         }
 
         [TestMethod]
-        public void ShieldDownByDefualt()
+        public void ShieldsDownByDefault()
         {
-            //Given
-
-            //When
-
-            //Then
             Assert.IsFalse(shield.IsUp());
         }
 
         [TestMethod]
-        public void ShieldIsUp()
+        public void TestRaiseShields()
         {
-            //Given
-
-            //When
-            shield.Raise();
-            //Then
-            Assert.IsTrue(shield.GetIsUp());
-        }
-        
-        [TestMethod]
-        public void ShieldDefaultStrength()
-        {
-            Assert.AreEqual(8000, shield.GetCurrentEnergyLevel());
+            shield.RaiseShield();
+            Assert.IsTrue(shield.IsUp());
         }
 
         [TestMethod]
-        public void ShieldTransferToShield()
+        public void ShieldDefaultEnergy()
         {
-            shield.AddEnergy(2000);
-            Assert.AreEqual(10000, shield.GetCurrentEnergyLevel());
+            Assert.AreEqual(8000, shield.GetCurrrentEnergy());
         }
 
         [TestMethod]
-        public void ShieldTransferDoesNotExceedMaximum()
+        public void TransferShieldEnergy()
         {
-            shield.AddEnergy(2001);
-            Assert.AreEqual(Shield.SHIELD_MAX, shield.GetCurrentEnergyLevel());
+            shield.TransferEnergy(2000);
+            Assert.AreEqual(10000, shield.GetCurrrentEnergy());
         }
-
 
         [TestMethod]
-        public void ShieldMaximum()
+        public void TestMaximumShieldPower()
         {
-            Assert.AreEqual(10000, Shield.SHIELD_MAX);
+            shield.TransferEnergy(2001);
+            Assert.AreEqual(shield.maxPower, shield.GetCurrrentEnergy());
         }
 
+        [TestMethod]
+        public void TestMinimumShieldPower()
+        {
+            shield.TransferEnergy(-8001);
+            Assert.AreEqual(0, shield.GetCurrrentEnergy());
+        }
 
+        [TestMethod]
+        public void TestShieldDamage()
+        {
+            shield.DamageShields(2000);
+            Assert.AreEqual(6000, shield.GetCurrrentEnergy());
+        }
     }
 }

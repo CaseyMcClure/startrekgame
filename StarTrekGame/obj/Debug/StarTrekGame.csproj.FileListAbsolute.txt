@@ -4,3 +4,9 @@ C:\Users\mcclurcj\source\repos\StarTrekGame\StarTrekGame\obj\Debug\StarTrekGame.
 C:\Users\mcclurcj\source\repos\StarTrekGame\StarTrekGame\obj\Debug\StarTrekGame.csproj.CoreCompileInputs.cache
 C:\Users\mcclurcj\source\repos\StarTrekGame\StarTrekGame\obj\Debug\StarTrekGame.dll
 C:\Users\mcclurcj\source\repos\StarTrekGame\StarTrekGame\obj\Debug\StarTrekGame.pdb
+C:\Users\VizCenter\Documents\GitHub\startrekgame\StarTrekGame\obj\Debug\StarTrekGame.csprojResolveAssemblyReference.cache
+C:\Users\VizCenter\Documents\GitHub\startrekgame\StarTrekGame\obj\Debug\StarTrekGame.csproj.CoreCompileInputs.cache
+C:\Users\VizCenter\Documents\GitHub\startrekgame\StarTrekGame\obj\Debug\StarTrekGame.dll
+C:\Users\VizCenter\Documents\GitHub\startrekgame\StarTrekGame\obj\Debug\StarTrekGame.pdb
+C:\Users\VizCenter\Documents\GitHub\startrekgame\StarTrekGame\bin\Debug\StarTrekGame.dll
+C:\Users\VizCenter\Documents\GitHub\startrekgame\StarTrekGame\bin\Debug\StarTrekGame.pdb
