@@ -45,7 +45,6 @@
     <Compile Include="Shield.cs" />
     <Compile Include="Ship.cs" />
     <Compile Include="Subsystem.cs" />
-    <Compile Include="Weapons.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

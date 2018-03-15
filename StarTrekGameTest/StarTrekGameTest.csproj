@@ -51,6 +51,7 @@
     <Compile Include="ShieldTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShipTests.cs" />
+    <Compile Include="SubsystemTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -10,10 +10,21 @@ namespace StarTrekGame
     {
         int integrity = 10000;
         public int maxIntegrity = 10000;
+        private int energy = 0; 
 
         public int GetIntegrity()
         {
             return integrity;
+        }
+
+        public int GetEnergy()
+        {
+            return energy;
+        }
+
+        public void SetEnergy(int energyToAdd)
+        {
+            energy += energyToAdd;
         }
     }
 }
