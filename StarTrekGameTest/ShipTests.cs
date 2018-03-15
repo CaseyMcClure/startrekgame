@@ -1,15 +1,18 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StarTrekGame;
 
-namespace UnitTestProject1
+namespace StarTrekGameTest
 {
     [TestClass]
-    public class UnitTest1
+    public class ShipTests
     {
+        Ship ship = new Ship();
+
         [TestMethod]
         public void CheckForEngine()
         {
-
+            Assert.IsNotNull(ship.Engine);
         }
     }
 }
