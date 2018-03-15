@@ -1,17 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using StarTrekGame;
 
-namespace StarTrekGameTest
+namespace UnitTestProject1
 {
     [TestClass]
-    public class ShipTests
+    public class UnitTest1
     {
-        Ship ship = new Ship();
-
         [TestMethod]
         public void CheckForEngine()
         {
+<<<<<<< HEAD
             Assert.IsNotNull(ship.engine);
         }
 
@@ -49,9 +48,30 @@ namespace StarTrekGameTest
         [TestMethod]
         public void TestShieldDamage()
         {
-            ship.DamageShields(20000);
-            Assert.AreEqual(ship.shield.GetCurrentEnergy(), 0);
+            ship.ProcessAttack(20000);
+            Assert.AreEqual(0, ship.shield.GetCurrentEnergy());
         }
 
+        [TestMethod]
+        public void TestIncomingAttack()
+        {
+            MockRandom mockRandom = new MockRandom();
+            ship = new Ship(mockRandom);
+            ship.ProcessAttack(20000);
+            Assert.AreEqual(0, ship.shield.GetCurrentEnergy());
+            Assert.AreNotEqual(ship.engine.maxIntegrity, ship.engine.GetIntegrity());
+
+        }
+
+        class MockRandom : Random
+        {
+            public override int Next(int maxValue)
+            {
+                return 0;
+            }
+=======
+
+>>>>>>> 5315d1d59c2186767334a8fbb4e68bdca5bf7f82
+        }
     }
 }

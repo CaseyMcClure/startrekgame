@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StarTrekGame
+namespace SuperStarTrek
 {
     public class Shield:Subsystem
     {
@@ -22,7 +22,7 @@ namespace StarTrekGame
             isUp = true;
         }
 
-        public int GetCurrentEnergy()
+        public int GetCurrrentEnergy()
         {
             return energy;
         }

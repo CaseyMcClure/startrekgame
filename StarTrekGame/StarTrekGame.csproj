@@ -41,7 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Engine.cs" />
+<<<<<<< HEAD
     <Compile Include="Phaser.cs" />
+=======
+    <Compile Include="Game.cs" />
+>>>>>>> 5315d1d59c2186767334a8fbb4e68bdca5bf7f82
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shield.cs" />
     <Compile Include="Ship.cs" />

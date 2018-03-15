@@ -4,19 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StarTrekGame
+namespace SuperStarTrek
 {
     public class Subsystem
     {
-        int integrity = 10000;
-        public int maxIntegrity = 10000;
+        int integrity = 10;
+        public int maxIntegrity = 10;
 
         public int GetIntegrity()
         {
-            return integrity;
+            return maxIntegrity;
         }
 
-        public void Damage(int amount)
+        public void DamageIntegrity(int amount)
         {
             integrity -= amount;
         }
