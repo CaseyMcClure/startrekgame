@@ -9,8 +9,8 @@ namespace StarTrekGame
     public class Shield:Subsystem
     {
         bool isUp = false;
-        int power = 8000;
-        public int maxPower = 10000;
+        int energy = 8000;
+        public int maxEnergy = 10000;
 
         public bool IsUp()
         {
@@ -24,32 +24,32 @@ namespace StarTrekGame
 
         public int GetCurrentEnergy()
         {
-            return power;
+            return energy;
         }
 
         public void TransferEnergy(int amountToTransfer)
         {
-            power += amountToTransfer;
-            if (power > maxPower)
+            energy += amountToTransfer;
+            if (energy > maxEnergy)
             {
-                power = maxPower;
+                energy = maxEnergy;
             }
-            if (power < 0)
+            if (energy < 0)
             {
-                power = 0;
+                energy = 0;
             }
         }
 
         public void DamageShields(int amountToDamage)
         {
-            power -= amountToDamage;
-            if (power > maxPower)
+            energy -= amountToDamage;
+            if (energy > maxEnergy)
             {
-                power = maxPower;
+                energy = maxEnergy;
             }
-            if (power < 0)
+            if (energy < 0)
             {
-                power = 0;
+                energy = 0;
             }
         }
     }

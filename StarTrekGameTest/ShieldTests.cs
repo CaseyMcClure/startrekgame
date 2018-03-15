@@ -50,7 +50,7 @@ namespace StarTrekGameTest
         public void TestMaximumShieldPower()
         {
             shield.TransferEnergy(2001);
-            Assert.AreEqual(shield.maxPower, shield.GetCurrentEnergy());
+            Assert.AreEqual(shield.maxEnergy, shield.GetCurrentEnergy());
         }
 
         [TestMethod]
