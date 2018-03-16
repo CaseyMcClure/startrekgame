@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using StarTrekGame;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StarTrekGame;
+
 
 namespace StarTrekGameTests
 {
     [TestClass]
-    public class ShipTests
+    public class UnitTest1
     {
         Ship ship;
 

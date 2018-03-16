@@ -14,8 +14,7 @@ namespace StarTrekGameTests
     {
        Shield shield;
 
-        [TestInitialize()]
-       public void Startup()
+       public ShieldTests()
         {
             shield = new Shield();
         }
