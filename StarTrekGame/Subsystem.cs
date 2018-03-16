@@ -14,7 +14,7 @@ namespace StarTrekGame
 
         public int GetIntegrity()
         {
-            return maxIntegrity;
+            return integrity;
         }
 
         public int GetEnergy()

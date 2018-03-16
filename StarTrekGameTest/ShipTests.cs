@@ -11,12 +11,6 @@ namespace StarTrekGameTests
     {
         Ship ship;
 
-        [TestMethod]
-        public void CheckForEngine()
-        {
-            Assert.IsNotNull(ship.engine);
-        }
-
         [TestInitialize()]
         public void Startup()
         {
@@ -26,7 +20,25 @@ namespace StarTrekGameTests
         [TestMethod]
         public void CheckForEngine()
         {
-            Assert.IsNotNull(ship.GetEngine());
+            Assert.IsNotNull(ship.engine);
+        }
+
+        [TestMethod]
+        public void CheckForPhaser()
+        {
+            Assert.IsNotNull(ship.phaser);
+        }
+
+        [TestMethod]
+        public void CheckForTorpedo()
+        {
+            Assert.IsNotNull(ship.torpedo);
+        }
+
+        [TestMethod]
+        public void CheckForShield()
+        {
+            Assert.IsNotNull(ship.shield);
         }
 
         [TestMethod]
@@ -40,23 +52,15 @@ namespace StarTrekGameTests
         {
             Assert.AreEqual(ship.GetEnergy(), ship.energy);
         }
-
-        [TestMethod]
-        public void ShipHasShield()
-        {
-            Assert.IsNotNull(ship.GetShield());
-        }
         
         [TestMethod]
         public void transferEnergyToSubsystem()
         {
-<<<<<<< HEAD
             int currentEnergy = ship.GetEnergy();
             int energyTransfer;
-=======
+
             ship.ProcessAttack(20000);
             Assert.AreEqual(0, ship.shield.GetCurrentEnergy());
->>>>>>> e17f04f89a90aa68da6b00e3c25bce85d9f1fd32
         }
 
         [TestMethod]
@@ -76,9 +80,6 @@ namespace StarTrekGameTests
             {
                 return 0;
             }
-=======
-
->>>>>>> 5315d1d59c2186767334a8fbb4e68bdca5bf7f82
         }
     }
 }

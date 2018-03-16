@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StarTrekGame
 {
-    class Ship
+    public class Ship
     {
         public Engine engine;
         public Phaser phaser;
@@ -18,22 +18,13 @@ namespace StarTrekGame
 
         public Ship()
         {
-
-            phaser = new Phaser();
-            subsystems.Add(phaser);
-
-            torpedo = new Torpedo();
-            subsystems.Add(torpedo);
-
-            shield = new Shield();
-            subsystems.Add(shield);
+            PopulateShip();
             energy = 80000;
         }
 
         public Ship(Random r)
         {
             PopulateShip();
-
             this.r = r;
         }
 
@@ -43,6 +34,15 @@ namespace StarTrekGame
 
             engine = new Engine();
             subsystems.Add(engine);
+
+            phaser = new Phaser();
+            subsystems.Add(phaser);
+
+            torpedo = new Torpedo();
+            subsystems.Add(torpedo);
+
+            shield = new Shield();
+            subsystems.Add(shield);
         }
 
         public Engine GetEngine()
